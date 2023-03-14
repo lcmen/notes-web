@@ -1,0 +1,12 @@
+baseURL = 'http://notes.mendelowski.com/'
+languageCode = 'en-us'
+title = 'My Notes'
+theme = "simplr"
+
+[params]
+  AuthorName = 'Lucas Mendelowski'
+
+[permalinks]
+  note = '/n/:title'
+  tags = "/t/:slug"
+

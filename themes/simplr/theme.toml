@@ -1,0 +1,12 @@
+name = "Simplr"
+license = "MIT"
+licenselink = "https://github.com/lcmen/simplr/blob/master/LICENSE"
+description = "Simplr than anything"
+homepage = ""
+tags = []
+features = []
+min_version = "0.1.0"
+
+[author]
+  name = "Lucas Mendelowski"
+  homepage = "https://mendelowski.com"

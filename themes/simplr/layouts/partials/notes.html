@@ -1,0 +1,14 @@
+<ul>
+  {{ range . }}
+    <li>
+      <a href="{{.Permalink}}" class="text-lg text-sky-500 hover:text-sky-400">
+        {{.Title}}
+      </a>
+      <span class="text-gray-400">
+        {{ range .Params.tags }}
+          #{{ . }}
+        {{ end }}
+      </span>
+    </li>
+  {{ end }}
+</ul>
