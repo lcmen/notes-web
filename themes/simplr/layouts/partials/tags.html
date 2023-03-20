@@ -1,0 +1,8 @@
+<div class="flex">
+  {{ range $i, $tag := . }}
+    {{- if $i -}}<span>,&nbsp;</span>{{ end -}}
+    {{ with $tag }}
+      <a href="{{ .Permalink }}" class="text-sky-600 hover:underline">{{ .Title }}</a>
+    {{ end }}
+  {{ end }}
+</div>

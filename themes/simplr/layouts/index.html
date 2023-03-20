@@ -1,3 +1,6 @@
+{{ define "title" }}
+  All notes
+{{ end }}
 {{ define "main" }}
   {{ partial "notes.html" (where site.RegularPages "Type" "in" "note") }}
 {{ end }}

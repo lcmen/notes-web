@@ -9,4 +9,3 @@ theme = "simplr"
 [permalinks]
   note = '/n/:title'
   tags = "/t/:slug"
-

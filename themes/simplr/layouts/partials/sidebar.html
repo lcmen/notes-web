@@ -1,0 +1,17 @@
+<div class="fixed h-screen pt-20">
+    <h1 class="text-lg font-semibold">{{ .Site.Params.AuthorName }}</h1>
+    <p class="text-sm text-gray-400">{{ .Site.Title }}</p>
+    <h2 class="text-base font-semibold">Navigation</h2>
+    <ul class="text-sm">
+        <li>
+            »
+            <a href="/" class="text-sky-600 hover:underline">All</a>
+        </li>
+        {{ range .Site.Taxonomies.tags }}
+        <li>
+            »
+            <a href="{{ .Page.Permalink }}" class="text-sky-600 hover:underline">{{ .Page.Title | humanize }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</div>

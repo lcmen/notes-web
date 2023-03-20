@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Simple Theme for Hugo",
   "scripts": {
-    "build": "npx tailwind -i ./assets/style.css -o ./static/css/style.css",
-    "start": "npx tailwind -i ./assets/style.css -o ./static/css/style.css --watch"
+    "build": "npx tailwind -i ./assets/style.css -o ./static/css/style.css --minitfy",
+    "start": "npx tailwind -i ./assets/style.css -o ./static/css/style.css --minitfy --watch"
   },
   "keywords": [
     "hugo",

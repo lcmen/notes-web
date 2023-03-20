@@ -1,14 +1,11 @@
-<ul>
+<div class="flex flex-col">
   {{ range . }}
-    <li>
-      <a href="{{.Permalink}}" class="text-lg text-sky-500 hover:text-sky-400">
+    <article class="flex items-center">
+      <a href="{{ .Permalink }}" class="text-sky-600 hover:underline">
         {{.Title}}
       </a>
-      <span class="text-gray-400">
-        {{ range .Params.tags }}
-          #{{ . }}
-        {{ end }}
-      </span>
-    </li>
+      <span class="text-sm inline-block">&nbsp;»&nbsp;</span>
+      <i class="text-sm text-gray-400">{{ .Date.Format "Jan 2, 2006" }}</i>
+    </article>
   {{ end }}
-</ul>
+</div>

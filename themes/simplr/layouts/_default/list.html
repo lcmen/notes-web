@@ -1,3 +1,6 @@
+{{ define "title" }}
+  {{ .Page.Data.Term | humanize }} notes
+{{ end }}
 {{ define "main" }}
-{{ partial "notes.html" .Pages }}
+  {{ partial "notes.html" .Pages }}
 {{ end }}

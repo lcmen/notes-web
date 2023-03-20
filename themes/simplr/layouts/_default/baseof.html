@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     {{- partial "head.html" . -}}
-    <body class="flex flex-col h-screen bg-gray-50">
-        {{- partial "header.html" . -}}
-        {{- partial "hero.html" . -}}
-        <section class="grow bg-white">
-            <div class="container mx-auto py-4">
-            {{- block "main" . }}{{- end }}
+    <body class="font-inter bg-gray-50 text-gray-700">
+        <div class="container flex gap-3">
+            <aside class="w-1/5 shrink-0">
+                {{- partial "sidebar" . -}}
+            </aside>
+            <div class="grow">
+                <section class="min-h-screen px-5 flex flex-col bg-white">
+                    <header class="border-b border-gray-200 py-3">
+                        <h1 class="text-2xl">
+                            {{- block "title" . }}{{- end }}
+                        </h1>
+                    </header>
+                    <main class="grow py-3">
+                        {{- block "main" . }}{{- end }}
+                    </main>
+                    <footer class="border-t border-gray-200 py-3">
+                      <p class="m-0 text-xs">Copyright © {{ .Site.Params.AuthorName }}. All rights reserved.</div>
+                    </footer>
+                </section>
             </div>
-        </section>
-        {{- partial "footer.html" . -}}
+        </div>
     </body>
 </html>

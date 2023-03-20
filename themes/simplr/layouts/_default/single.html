@@ -1,3 +1,15 @@
+{{ define "title" }}
+  {{ .Title }}
+{{ end }}
 {{ define "main" }}
-  {{ .Content }}
+<article>
+  <header class="flex text-xs uppercase">
+    {{ .Date.Format "Jan 2, 2006" }}
+    &nbsp;»&nbsp;
+    {{- partial "tags" (.GetTerms "tags") -}}
+  </header>
+  <div class="mt-3">
+    {{ .Content }}
+  </div>
+</article>
 {{ end }}
